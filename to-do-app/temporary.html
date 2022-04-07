@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+
+            background: black;
+            display: flex
+        }
+
+        .container>div {
+            border: 1px solid red;
+            background: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            width: 100%
+        }
+
+        @media (max-width:300px) {
+
+            .navbar {
+                display: block;
+
+            }
+        }
+
+        .navbar>div {
+            margin: 5px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Create a Flex Container</h1>
+
+    <div class="container">
+        <div style="width:100px">
+            Profile
+            <div>
+                Categories
+            </div>
+        </div>
+
+        <div style="flex:1">
+            <div class="navbar">
+                <div>HOME</div>
+                <div>MENU</div>
+                <div>SETTING</div>
+                <div>TODO</div>
+
+            </div>
+
+            OTHER DASHBOARD ITEMS
+        </div>
+
+    </div>
+
+    <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+    <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+</body>
+
+</html>

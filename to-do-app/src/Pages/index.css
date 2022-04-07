@@ -1,0 +1,278 @@
+.bgimage {
+  box-shadow: 0px 0px 10px 1px #888888;
+  border-radius: 10px 13px 11px;
+  margin-top: 4px;
+  background-image: url('../assets/logo.jpg');
+  width: 85px;
+  height: 83px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.lineb {
+  user-select: auto;
+  border: 4px solid deepskyblue;
+  background: deepskyblue;
+}
+
+.container {
+
+  background: black;
+  display: flex
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #8bc34a;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.flrow {
+  flex-direction: row;
+}
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+}
+.grey {
+  color: #979593;
+}
+
+
+.plus {
+      color: #b3abb1;
+  font-size: xx-large
+
+}
+.plus:hover{
+
+        color: #8bc34a;
+        cursor: pointer;}
+
+.flex03 {
+  align-items: center;
+  height: 100vh;
+  flex: 0.3 1 0%;
+  width: 100px;
+}
+
+
+.font03 {
+  font-family: font3;
+}
+
+.px4 {
+  height: 2px;
+}
+
+.px5 {
+  height: 1.5px;
+}
+
+.px45 {
+  height: 2px;
+}
+
+.menue {
+  border-radius: 100px;
+  padding: 8px;
+  height: 17px;
+  border: 1px solid grey;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.menue>div {
+  width: 20px;
+  background-color: grey;
+  margin: 3px 0;
+}
+
+:root {
+  --borderWidth: 3px;
+  --height: 17px;
+  --width: 8px;
+  --borderColor: grey;
+}
+
+.fonttext {
+  display: inline;
+  font-weight: 600;
+  /* font-family: font4; */
+}
+button{width:200px;height:50px; border:none; color:white;background-color: #03a9f4;}
+.paddingaround{  padding-left: 5px;
+}
+.checkdiv {
+  display: inline-block;
+  border-radius: 100px;
+  border: 1px solid grey;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+  padding-left: 4px;
+}
+
+.check {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  margin-left: 10px;
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
+
+@font-face {
+  font-family: font3;
+  src: url("../assets/static/static/Cairo-Medium.ttf");
+}
+
+@font-face {
+  font-family: font4;
+  src: url("../assets/static/static/Cairo-Light.ttf");
+}
+
+.bgimg {
+  height: 100px;
+  background-image: url(data:image/jpeg;base64,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);
+  background-repeat: no-repeat;
+  text-align: center;
+  /* margin-left: 106px; */
+  display: inline-block;
+  width: 100px;
+}
+
+.container>div {
+  border-bottom: 1px solid #c2bbc1;
+  border-left: 1px solid #c0b9b9bd;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.datacon {
+  display: flex;
+  user-select: auto;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.blueline {
+  background: #71bafe;
+  width: 25px;
+  margin: 13px;
+  display: inline;
+  height: 9px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1px solid #e2e0e2;
+  padding-top: 10px;
+  color: #979593;
+  padding-bottom: 10px;
+
+}
+
+.dispflex {
+  user-select: auto;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width:300px) {
+
+  .navbar {
+    display: block;
+
+  }
+}
+
+@media screen and (max-width:800px) {
+
+
+  .flex03 {
+
+    flex: 0.9 1 0%;
+    width: 100px;
+  }
+
+}
+
+td {
+  width: 60px;
+}
+
+.font {
+  font-weight: 600;
+  color: grey;
+}
+
+.inline {
+  display: inline;
+}
+
+.font02 {
+  font-family: font2;
+}
+
+@font-face {
+  font-family: font2;
+  src: url("../assets/static/static/Cairo-Bold.ttf");
+}
+
+.navbar>div {
+  margin: 5px
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.space-ar {
+  justify-content: space-around;
+}
+
+.b-bottom {
+  border-bottom: 1px solid #c2bbc1;
+}
+
+.b-top {
+  border-top: 1px solid #c2bbc1;
+}
+
+.space-bw {
+  justify-content: space-between;
+}
