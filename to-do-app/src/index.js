@@ -38,6 +38,7 @@ class Header3 extends React.Component {
     super(props);
     this.state = {favoritecolor: "red"};
   }
+
   static getDerivedStateFromProps(props, state) {
     return {favoritecolor: props.favcol };
   }
@@ -54,8 +55,21 @@ class Header3 extends React.Component {
   }
 }
 
-ReactDOM.render(<Header favcol="yellow"/>, document.getElementById('root'));
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
 
