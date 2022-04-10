@@ -2,11 +2,88 @@
   box-shadow: 0px 0px 10px 1px #888888;
   border-radius: 10px 13px 11px;
   margin-top: 4px;
-  background-image: url('../assets/logo.jpg');
+  background-image: url('../Assets/logo.jpg');
   width: 85px;
   height: 83px;
   display: inline-block;
   background-repeat: no-repeat;
+}
+
+.x {
+  border: none;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: larger;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: fontx;
+}
+
+.ui-Input {
+  outline: none;
+  user-select: auto;
+  padding: 2px;
+  font-size: large;
+  border: 2px solid gainsboro;
+
+}
+
+.Enter {
+  outline: none;
+  border: none;
+  border: 1px solid #25a233;
+  color: #25a233;
+  height: 35px;
+  background-color: white;
+  transition: background-color 0.5s;
+  border-radius:5px;
+  width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-cont {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Close {
+  outline: none;
+  border: none;
+  border: 1px solid #ff5144;
+  color: #ff5144;
+  height: 35px;
+  background-color: white;
+  border-radius:5px;
+  transition: background-color 0.5s;
+  width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.Close:hover {
+  background-color: #ff5144;
+  color: #fff;
+}
+
+.Enter:hover {
+  color: #fff;
+  background-color: #25a233;
+}
+
+@font-face {
+  font-family: fontx;
+  src: url('../Assets/RubikBubbles-Regular.ttf');
+}
+
+.x:hover {
+  color: #7f7777bd;
 }
 
 .lineb {
@@ -28,6 +105,7 @@
 .center {
   text-align: center;
 }
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -35,13 +113,14 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 130px;
   background-color: #8bc34a;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  
+  font-size: large;
+
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
@@ -53,26 +132,32 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 .flrow {
   flex-direction: row;
 }
+
 [data-tooltip]:before {
   content: attr(data-tooltip);
 }
+
 .grey {
   color: #979593;
 }
 
 
 .plus {
-      color: #b3abb1;
-  font-size: xx-large
-
+  color: #b3abb1 !important;
+  font-size: xx-large !important;
+  border: none;
+  background-color: white;
 }
-.plus:hover{
 
-        color: #8bc34a;
-        cursor: pointer;}
+.plus:hover {
+
+  color: #8bc34a !important;
+  cursor: pointer;
+}
 
 .flex03 {
   align-items: center;
@@ -129,9 +214,11 @@
   font-weight: 600;
   /* font-family: font4; */
 }
-button{width:200px;height:50px; border:none; color:white;background-color: #03a9f4;}
-.paddingaround{  padding-left: 5px;
+
+.paddingaround {
+  padding-left: 5px;
 }
+
 .checkdiv {
   display: inline-block;
   border-radius: 100px;
@@ -154,12 +241,12 @@ button{width:200px;height:50px; border:none; color:white;background-color: #03a9
 
 @font-face {
   font-family: font3;
-  src: url("../assets/static/static/Cairo-Medium.ttf");
+  src: url("../Assets/static/static/Cairo-Medium.ttf");
 }
 
 @font-face {
   font-family: font4;
-  src: url("../assets/static/static/Cairo-Light.ttf");
+  src: url("../Assets/static/static/Cairo-Light.ttf");
 }
 
 .bgimg {
@@ -250,7 +337,7 @@ td {
 
 @font-face {
   font-family: font2;
-  src: url("../assets/static/static/Cairo-Bold.ttf");
+  src: url("../Assets/static/static/Cairo-Bold.ttf");
 }
 
 .navbar>div {

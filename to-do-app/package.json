@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@firebase/app": "^0.7.20",
+    "@firebase/auth": "^0.19.11",
+    "@firebase/database": "^0.12.7",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
@@ -11,7 +14,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.4",
     "react-scripts": "5.0.0",
+    "sweetalert2": "^11.4.8",
+    "sweetalert2-react-content": "^4.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
