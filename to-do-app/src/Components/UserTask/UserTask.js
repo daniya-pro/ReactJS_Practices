@@ -12,33 +12,42 @@ class UserTask extends React.Component {
 task:''
         }
     }
+   
+    
+//     componentDidMount(e){      
+//           this.setState({task:e})
+// console.log(e)}
     render() {
-        const auth = getAuth();
+        let TaskToDo=[]
 
+        const auth = getAuth();
 // const userId = auth.currentUser.uid;
         onValue(ref(database, "Tasks"), (snapshot) => {
             const data = snapshot.val();
                       let key = Object.keys(data);
-                       let TaskToDo=[]
 // console.log(data,' i am from onValue ')
             key.forEach((e,i)=>{
 
-TaskToDo.push(data[i])
+TaskToDo.push(data[e])
             })
-        
-        this.setState({task:TaskToDo})})
-        const { addTask } = this.props
+
+    })
+  var TaskLeft=  TaskToDo.map((e)=> e.Task            )
+    const { addTask } = this.props
 
         return (
 
             <div className="flex" style={{ flexDirection: 'column' }}>
-          
+        
             </div>
 
         )
     }
 
 }
+//[a,b,c,d]
+//<div>a</div>
+//<div> b</div></div>
 /**
  * <div className="flex"> <div className="menue"><div className="px4"></div>
                             <div className="px5"></div>

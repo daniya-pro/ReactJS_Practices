@@ -23,15 +23,7 @@ class Home extends Component {
 
 
     render() {
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        ];
-        var dayNames = ["monday", "tuesday", "wedneday", "thursday", "friday", "saturday", "sunday"]
-        const month = monthNames[new Date().getMonth()];
-        const day = dayNames[new Date().getDay()];
-        var date = new Date().getDate()
-        var year = new Date().getFullYear()
-        var datestring = day + " " + date + " " + month + " " + year
+        
         return (
             <div className="container">
                 <div className="flex03">

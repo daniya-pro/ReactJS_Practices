@@ -38,7 +38,6 @@ class AddTaskModal extends Component {
             // console.log(this.state.text,)
             }
         } catch (e) {
-            console.error(e, "error from submithandle")
         }
 
     }
