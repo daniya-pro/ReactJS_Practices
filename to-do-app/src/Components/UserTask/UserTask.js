@@ -14,31 +14,47 @@ task:''
     }
    
     
-//     componentDidMount(e){      
-//           this.setState({task:e})
-// console.log(e)}
-    render() {
-        let TaskToDo=[]
+componentDidMount(){
+    let TaskToDo=[]
 
-        const auth = getAuth();
+        // const auth = getAuth();
 // const userId = auth.currentUser.uid;
         onValue(ref(database, "Tasks"), (snapshot) => {
             const data = snapshot.val();
-                      let key = Object.keys(data);
+            let key = Object.values(data);
 // console.log(data,' i am from onValue ')
-            key.forEach((e,i)=>{
+            console.log(key)
+console.log(TaskToDo,"<==== task to do",'data==',data)
+       var TaskLeft=  key.map((e)=> e.Task)   
+     console.log(TaskLeft,'taskleft')     
+var htmlArray=[]
+TaskLeft.forEach((e)=>{
+htmlArray.push(
 
-TaskToDo.push(data[e])
-            })
 
-    })
-  var TaskLeft=  TaskToDo.map((e)=> e.Task            )
+<div className="flex"> <div className="menue"><div className="px4"></div>
+                            <div className="px5"></div>
+                            <div className="px45"></div></div><div style={{ marginLeft: '5px' }}><div className='checkdiv'><div className="check"></div></div> </div>
+                            <div className="paddingaround"><p className="fonttext">{e}</p><br /><span>{"datestring"}</span></div><br/></div>
+
+
+
+    
+})})
+
+this.setState({task:htmlArray})      
+  console.log(this.state.task,'i am from onvalue..........',htmlArray)
+
+}
+    render() {
+        console.log(this.state.task,'i am from render..........')
+
     const { addTask } = this.props
 
         return (
 
             <div className="flex" style={{ flexDirection: 'column' }}>
-        
+        {this.state.task}
             </div>
 
         )
@@ -49,10 +65,6 @@ TaskToDo.push(data[e])
 //<div>a</div>
 //<div> b</div></div>
 /**
- * <div className="flex"> <div className="menue"><div className="px4"></div>
-                            <div className="px5"></div>
-                            <div className="px45"></div></div><div style={{ marginLeft: '5px' }}><div className='checkdiv'><div className="check"></div></div> </div>
-                            <div className="paddingaround"><p className="fonttext">Correct mail sending from</p><br /><span>{datestring}</span></div></div><br /><br /><br />
- */
+ *  */
 
 export default UserTask
