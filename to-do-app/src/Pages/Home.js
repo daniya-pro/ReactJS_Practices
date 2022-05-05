@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import style from "../Pages/index.css"
 import img from "../Assets/logo.jpg"
 import imag from "../Assets/logo2.jpg"
@@ -9,6 +9,7 @@ import Friends from "../Components/Sidemenu/Friends.js";
 import MenueBar from "../Components/MenueBar/MenueBar.js";
 import { database } from "../Config/firebaseConfig";
 import UserTask from "../Components/UserTask/UserTask";
+import { ref, set, get, push, child } from "@firebase/database"
 
 class Home extends Component {
     constructor() {
@@ -20,14 +21,28 @@ class Home extends Component {
     toggleAddTask = (bool) => {
         this.setState({ addTask: bool })
     }
+    getValuesdb() {
+        get(child(ref(database), "visiblityFrom")).then((d) => { 
+if(d.Status===undefined){
+    set(ref(database, "visiblityFrom"), {
+           
+       Status:"All"
+        
+                  })
+}
 
+
+         })
+        console.log('hello')
+    }
 
     render() {
-        
+        this.getValuesdb()
+
         return (
             <div className="container">
                 <div className="flex03">
-                    <Profile/>
+                    <Profile />
                     <Categories />
                     <Friends />
 
@@ -35,7 +50,7 @@ class Home extends Component {
                 </div>
 
 
-                <div style={{ flex: "1" }}>
+                <div className='flex1'>
                     <Topbar />
                     <MenueBar toggleAddTask={this.toggleAddTask} />
                     <UserTask addTask={this.state.addTask} />
