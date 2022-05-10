@@ -55,7 +55,8 @@ this.getUpdatedb(e,dateText,taskText)
         // const auth = getAuth();
         // const userId = auth.currentUser.uid;
         onValue(ref(database, "Tasks"), (snapshot) => {
-            const data = snapshot.val();
+                console.log('hello')
+    const data = snapshot.val();
             let key = Object.values(data);
             // console.log(data,' i am from onValue ')
             console.log(key)
@@ -79,15 +80,14 @@ this.getUpdatedb(e,dateText,taskText)
                         <div className="px2 point1">
 
                         </div>
-            <div><ul  className="drdown-cont">
-    <li className="drdown-namecont"><a href="#" className="drdown-name">Two</a>
-      <ul className="dropdown">
-        <li><a href="#">Sub-1</a></li>
-        <li><a href="#">Sub-2</a></li>
-        <li><a href="#">Sub-3</a></li>
-      </ul>
-    </li>
-  </ul></div> 
+            <span className="drdown-cont"><select className="select" onChange={(e)=>{console.log(e.target.value,'event target')}}>
+            <option value='disabled' disabled></option>
+   <option value='Completed'>Completed</option>
+            <option value='disabled' disabled></option>
+ <option value='Primary'>Primary</option>
+ <option value='disabled' disabled></option>
+
+</select></span> 
                         </div>
                        
                         <div className="ml-5">
@@ -123,10 +123,15 @@ this.getUpdatedb(e,dateText,taskText)
 
         )
     }
-/*<select style="background: #009966; color: #FFF;">
-  <option value='0' style="background: white; color: black;">Protect my email</option>
-  <option value='1' style="background: white; color: black;">Show email on advert</option>
-</select>*/
+/*<ul  className="drdown-cont">
+    <li className="drdown-namecont"><a href="#" className="drdown-name">Two</a>
+      <ul className="dropdown">
+        <li><a href="#">Sub-1</a></li>
+        <li><a href="#">Sub-2</a></li>
+        <li><a href="#">Sub-3</a></li>
+      </ul>
+    </li>
+  </ul>*/
 }
 
 
