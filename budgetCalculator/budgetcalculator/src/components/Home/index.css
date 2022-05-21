@@ -1,0 +1,40 @@
+body{
+    background-color:lightgrey;
+}
+
+.color-w{
+    color: white;
+}
+.flex{
+    display: flex;
+}
+.space-around{
+ justify-content: space-around; 
+}
+.white-box{background-color: white;}
+.inputui{border: none;
+    padding: 14px;
+    border-bottom: 1px solid black;
+}
+@media only screen and (min-width: 540px) {
+ .white-box{   width: 70%;
+    margin-left: 15%;
+}}
+.inputui:focus,.sumbit:focus{
+
+outline: none;
+
+}
+.bgcolor-r{
+    padding: 5px;
+    background-color: red;}
+.submit{
+padding-bottom: 5px;
+padding-top: 5px;
+background-color: tomato;
+border: none;
+color:white;
+height: 30px;
+width: 70px;
+outline:none;
+}
