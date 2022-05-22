@@ -9,13 +9,13 @@ function Home() {
             Budget Calculator
       </h1><div>
           </div> <div className="white-box">
-      <div>
+      <div className='theflexbox'>
           <div className="flex space-around">
           <div>
                   charge
                 <br/>  <input placeholder='e.g. 100' className="inputui" onchange={(e)=>{console.log(e.target)
                     
-                    setValue({v1:e.value})}}/>
+                    setValue({v1:e.target.value})}}/>
               </div><div>
                   Amount
                   <br/><input placeholder='e.g. 100' className="inputui" />

@@ -25,6 +25,9 @@ body{
 outline: none;
 
 }
+.theflexbox{
+    padding-top: 30px;
+}
 .bgcolor-r{
     padding: 5px;
     background-color: red;}
