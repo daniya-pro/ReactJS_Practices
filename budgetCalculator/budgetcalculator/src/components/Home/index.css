@@ -1,7 +1,10 @@
 body{
     background-color:lightgrey;
 }
-
+.errorText{
+    color:white;
+    background-color: red;
+}
 .color-w{
     color: white;
 }
