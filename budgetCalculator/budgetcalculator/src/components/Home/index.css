@@ -1,43 +1,66 @@
-body{
-    background-color:lightgrey;
+body {
+    background-color: lightgrey;
 }
 
-.color-w{
+.color-w {
     color: white;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.space-around{
- justify-content: space-around; 
+
+.space-around {
+    justify-content: space-around;
 }
-.white-box{background-color: white;}
-.inputui{border: none;
+
+.white-box {
+    background-color: white;
+}
+
+.inputui {
+    border: none;
     padding: 14px;
     border-bottom: 1px solid black;
 }
-@media only screen and (min-width: 540px) {
- .white-box{   width: 70%;
-    margin-left: 15%;
-}}
-.inputui:focus,.sumbit:focus{
 
-outline: none;
+@media only screen and (min-width: 540px) {
+    .white-box {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+.inputui:focus,
+.sumbit:focus {
+
+    outline: none;
 
 }
-.theflexbox{
+
+
+.submit:hover {
+    box-shadow: -1px 5px 8px 2px #827a7a;
+}
+
+.theflexbox {
     padding-top: 30px;
 }
-.bgcolor-r{
+
+.bgcolor-r {
     padding: 5px;
-    background-color: red;}
-.submit{
-padding-bottom: 5px;
-padding-top: 5px;
-background-color: tomato;
-border: none;
-color:white;
-height: 30px;
-width: 70px;
-outline:none;
+    background-color: red;
+}
+
+.submit {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: box-shadow 333ms ease-in-out 20ms;
+    background-color: tomato;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 70px;
+    outline: none;
 }

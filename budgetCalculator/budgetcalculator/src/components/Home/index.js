@@ -20,7 +20,7 @@ function Home() {
                   Amount
                   <br/><input placeholder='e.g. 100' className="inputui" />
               </div>
-          </div>
+          </div> 
          <br/> <button className="submit" onClick={()=>{}}>SUBMIT</button>
      </div>          <br/><br/><br/>
  </div>
