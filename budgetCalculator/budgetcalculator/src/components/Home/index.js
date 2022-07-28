@@ -5,7 +5,7 @@ function Home() {
   const [chargeTitle, setCharges] = useState("");
   const [submittedData, setSubmittedData] = useState([]);
   const [error, setError] = useState("");
-  const [TorF,setTorF]=useState("false")
+  const [Toremove,settoremove]=useState([])
   console.log("submittedData", submittedData);
 
   const submit = () => {
@@ -13,10 +13,10 @@ function Home() {
     if (!chargeTitle.length) return setError("please fill the charges input");
 
     let previousData = submittedData || [];
-    let newData = previousData.concat([{ amount, chargeTitle }]);
+    let newData = previousData.concat([{ amount, chargeTitle ,id:new Date().getTime()}]);
 
     setSubmittedData(newData);
-    console.log(submittedData,'new data')
+
     setAmount("");
     setCharges("");
   };
@@ -67,24 +67,32 @@ function Home() {
         </div>
         <br />
         {submittedData ? (
-          submittedData.map((e, i) => {
+          submittedData.map((d, i) => {
+            console.log(d,'id')
+
             return (
               <div className="flex center jcc">
                 <div className="flex w50 space-around p50 bb">
-                  <span className="charge">{e.chargeTitle}</span>{" "}
-                  <span className="rb wc amount">${e.amount}</span>{" "}
+                  <span className="charge">{d.chargeTitle}</span>{" "}
+                  <span className="rb wc amount">${d.amount}</span>{" "}
                   <span>
                     <button className="edit" onClick={()=>{
-setAmount(e.amount)
-setCharges(e.chargeTitle)
-setTorF("true")
 
+submittedData.filter((data)=>{
+console.log(data.id,d.id)
+  return data.id!==d.id
+
+
+
+})
                     }}>Edit</button>
                     <button className="delete">Delete</button>
                   </span>
                 </div>
               </div>
             );
+       
+        
           })
         ) : (
           <div></div>
