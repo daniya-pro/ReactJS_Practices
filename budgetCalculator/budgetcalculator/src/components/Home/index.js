@@ -5,7 +5,7 @@ function Home() {
   const [chargeTitle, setCharges] = useState("");
   const [submittedData, setSubmittedData] = useState([]);
   const [error, setError] = useState("");
-  const [TorF,setTorF]=useState("false")
+  const [TorF, setTorF] = useState("false")
   console.log("submittedData", submittedData);
 
   const submit = () => {
@@ -14,9 +14,26 @@ function Home() {
 
     let previousData = submittedData || [];
     let newData = previousData.concat([{ amount, chargeTitle }]);
+    // if(TorF!=='false'){
 
-    setSubmittedData(newData);
-    console.log(submittedData,'new data')
+    //   var [amounts,charges]=TorF
+    // }
+    if (TorF === "false") {
+      setSubmittedData(newData)
+    } else {
+
+      let Data = newData.forEach((e, i) => {
+         if (TorF[1].amounts === e.amount && TorF[1].charges === e.chargeTitle) {
+            newData.splice(i,1) 
+          }
+         }
+         )
+      console.log('TorF', TorF, 'newData', newData, 'Data', Data)
+      setSubmittedData(newData)
+
+    }
+
+    console.log(submittedData, 'new data', TorF)
     setAmount("");
     setCharges("");
   };
@@ -31,7 +48,7 @@ function Home() {
 
       <h1 className="color-w">Budget Calculator</h1>
       <div></div>
-      {}
+      { }
       <div className="white-box">
         <div className="theflexbox">
           <div className="flex space-around">
@@ -69,15 +86,15 @@ function Home() {
         {submittedData ? (
           submittedData.map((e, i) => {
             return (
-              <div className="flex center jcc">
+              <div key={i} className="flex center jcc">
                 <div className="flex w50 space-around p50 bb">
                   <span className="charge">{e.chargeTitle}</span>{" "}
                   <span className="rb wc amount">${e.amount}</span>{" "}
                   <span>
-                    <button className="edit" onClick={()=>{
-setAmount(e.amount)
-setCharges(e.chargeTitle)
-setTorF("true")
+                    <button className="edit" onClick={() => {
+                      setAmount(e.amount)
+                      setCharges(e.chargeTitle)
+                      setTorF(["true", { amounts: e.amount, charges: e.amount }])
 
                     }}>Edit</button>
                     <button className="delete">Delete</button>
