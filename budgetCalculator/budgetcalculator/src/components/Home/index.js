@@ -77,14 +77,13 @@ function Home() {
                   <span className="rb wc amount">${d.amount}</span>{" "}
                   <span>
                     <button className="edit" onClick={()=>{
-
+setSubmittedData(
 submittedData.filter((data)=>{
-console.log(data.id,d.id)
   return data.id!==d.id
 
 
 
-})
+}))
                     }}>Edit</button>
                     <button className="delete">Delete</button>
                   </span>
