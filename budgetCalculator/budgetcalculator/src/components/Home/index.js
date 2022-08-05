@@ -76,7 +76,9 @@ function Home() {
                   <span className="charge">{d.chargeTitle}</span>{" "}
                   <span className="rb wc amount">${d.amount}</span>{" "}
                   <span>
-                    <button className="edit" onClick={()=>{
+                    <button className="edit" onClick={()=>{ 
+                      setAmount(d.amount)
+                      setCharges(d.chargeTitle)
 setSubmittedData(
 submittedData.filter((data)=>{
   return data.id!==d.id
@@ -85,7 +87,14 @@ submittedData.filter((data)=>{
 
 }))
                     }}>Edit</button>
-                    <button className="delete">Delete</button>
+                    <button className="delete" onClick={()=>{setSubmittedData(
+submittedData.filter((data)=>{
+  return data.id!==d.id
+
+
+
+}))
+         }}>Delete</button>
                   </span>
                 </div>
               </div>
